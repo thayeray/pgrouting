@@ -152,7 +152,7 @@ Experimental and Proposed functions
 
   contraction-family
   pgr_areaContraction
-  areaContraction-family
+  areaContraction
   flow-family
   pgr_labelGraph
   pgr_connectedComponentsV
