@@ -35,6 +35,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #include <vector>
 
 #include "../../contraction/src/pgr_contractionGraph.hpp"
+#include "./pgr_areaContract.hpp"
 
 #include "cpp_common/pgr_alloc.hpp"
 #include "cpp_common/pgr_assert.h"
@@ -65,6 +66,9 @@ static void process_areaContraction(
     /*
     * Calling function to do areaContraction
     */
+    pgrouting::areacontraction::Pgr_contract<G> result(graph,
+            borderVertices,
+            shortcut_edges, log);
 
 
  }
