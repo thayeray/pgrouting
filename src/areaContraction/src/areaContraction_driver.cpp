@@ -35,6 +35,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #include <vector>
 
 #include "../../contraction/src/pgr_contractionGraph.hpp"
+#include "./pgr_areaContract.hpp"
 
 #include "cpp_common/pgr_alloc.hpp"
 #include "cpp_common/pgr_assert.h"
@@ -43,11 +44,16 @@ template <typename G>
 static void process_areaContraction(
         G &graph,
         const std::vector< pgr_edge_t > &edges,
-        const std::vector< int64_t > borderVertices,
+        std::vector< int64_t > borderVertices,
         std::vector< pgrouting::CH_edge > &shortcut_edges,
         std::ostringstream &log,
         std::ostringstream &err) {
     graph.insert_edges(edges);
+
+    std::sort(borderVertices.begin(), borderVertices.end());
+    borderVertices.erase(
+            std::unique(borderVertices.begin(), borderVertices.end()),
+            borderVertices.end());
 
     log << "Checking for valid border vertices\n";
     for (const auto vertex : borderVertices) {
@@ -65,6 +71,9 @@ static void process_areaContraction(
     /*
     * Calling function to do areaContraction
     */
+    pgrouting::areacontraction::Pgr_contract<G> result(graph,
+            borderVertices,
+            shortcut_edges, log);
 
 
  }
