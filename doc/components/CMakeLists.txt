@@ -1,6 +1,9 @@
 
 SET(LOCAL_FILES
+    components-family.rst
 	pgr_connectedComponentsV.rst
+	pgr_strongComponentsV.rst
+	pgr_biconnectedComponents.rst
     )
 
 foreach (f ${LOCAL_FILES})
