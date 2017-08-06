@@ -141,19 +141,19 @@ Experimental and Proposed functions
 :ref:`components` - Analyze components within a graph
 
 -  :ref:`pgr_connectedComponentsV` - Return the connected components of an undirected graph (Vertex version)
-
 -  :ref:`pgr_strongComponentsV` - Return the strongly connected components of a directed graph (Vertex version)
-
 -  :ref:`pgr_biconnectedComponents` - Return the biconnected components of an undirected graph
-
 -  :ref:`pgr_articulationPoints` - Return the articulation points of an undirected graph
-
 -  :ref:`pgr_bridges` - Return the bridges of an undirected graph
 
 .. rubric:: VRP
 
 - :ref:`pgr_gsocvrppdtw`
 - :ref:`pgr_vrp_basic`
+
+.. rubric:: Grpah Transformation
+
+- :ref:`pgr_lineGraph`
 
 
 .. toctree::
@@ -163,19 +163,9 @@ Experimental and Proposed functions
   flow-family
   pgr_labelGraph
   components-family
-  VRP-category
   pgr_gsoc_vrppdtw
   pgr_vrpOneDepot
-
-
-.. rubric:: rewrite of pgr_TRSP
-
-- :ref:`pgr_dijkstraTRSP`
-
-.. toctree::
-  :hidden:
-
-  pgr_dijkstraTRSP
+  pgr_lineGraph
 
 
 ..
