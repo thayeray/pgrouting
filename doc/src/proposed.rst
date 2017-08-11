@@ -169,7 +169,12 @@ Experimental and Proposed functions
 
 .. rubric:: Graph Transformation
 
-- :ref:`pgr_lineGraph`
+:doc:`pgr_lineGraph`
+
+.. toctree::
+  :hidden:
+
+  pgr_lineGraph
 
 
 ..
