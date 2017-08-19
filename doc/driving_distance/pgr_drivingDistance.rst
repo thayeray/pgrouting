@@ -32,8 +32,8 @@ Name
 Synopsis
 -------------------------------------------------------------------------------
 
-Using Dijkstra algorithm, extracts all the nodes that have costs less than or equal to the value ``distance``.
-The edges extracted will conform the corresponding spanning tree.
+Uses the Dijkstra algorithm to extract all of the nodes that have costs less than or equal to the value ``distance``.
+The extracted edges will conform the corresponding spanning tree.
 
 Signature Summary
 -------------------------------------------------------------------------------
@@ -105,7 +105,7 @@ Column          Type                  Description
 **start_vids** ``ARRAY[ANY-INTEGER]`` Array of identifiers of starting vertices.
 **distance**   ``FLOAT``              Upper limit for the inclusion of the node in the result.
 **directed**   ``BOOLEAN``            (optional). When ``false`` the graph is considered as Undirected. Default is ``true`` which considers the graph as Directed.
-**equicost**   ``BOOLEAN``            (optional). When ``true`` the node will only appear in the closest ``start_vid`` list.  Default is ``false`` which resembles several calls using the single starting point signatures. Tie brakes are arbitrarely.
+**equicost**   ``BOOLEAN``            (optional). When ``true`` the node will only appear in the closest ``start_vid`` list.  Default is ``false`` which resembles several calls using the single starting point signatures. Tie brakes are arbitrarely assigned.
 ============== ====================== =================================================
 
 
